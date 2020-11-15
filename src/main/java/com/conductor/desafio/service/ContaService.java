@@ -4,9 +4,11 @@ import com.conductor.desafio.model.Conta;
 import com.conductor.desafio.model.Pessoa;
 import com.conductor.desafio.repository.ContaRepository;
 import com.conductor.desafio.request.ContaResquest;
+import com.conductor.desafio.response.ContaResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -28,4 +30,10 @@ public class ContaService {
         Optional<Conta> optionalConta = contaRepository.findById(id);
         return optionalConta.get();
     }
+
+    public ContaResponse buscarPorPessoaId(Integer pessoaId) {
+        Pessoa pessoa = pessoaService.getId(pessoaId);
+        return contaRepository.findByPessoa(pessoa).map(ContaResponse::new).get();
+    }
+
 }
