@@ -12,6 +12,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "CONTAS")
+
+/** Criando Tabela Conta **/
 public class Conta implements Serializable {
 
     @Id

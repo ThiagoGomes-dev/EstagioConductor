@@ -13,6 +13,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "PESSOAS")
+
+/** Criando Tabela Pessoa **/
 public class Pessoa implements Serializable {
 
     @Id

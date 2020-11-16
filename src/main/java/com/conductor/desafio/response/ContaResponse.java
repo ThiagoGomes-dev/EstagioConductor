@@ -20,6 +20,7 @@ public class ContaResponse {
     @ApiModelProperty(position = 2)
     private PessoaResponse pessoa;
 
+    /** Aqui estou pegando os dados para poder utilizar na Classe ContaService, que é onde faço a parte de inserir/listar **/
     public ContaResponse(Conta conta) {
         this.id = conta.getId();
         this.pessoa = new PessoaResponse(conta.getPessoa());

@@ -28,6 +28,7 @@ public class PessoaResponse {
     @ApiModelProperty(position = 5)
     private LocalDate dataNascimento;
 
+    /** Aqui estou pegando os dados para poder utilizar na Classe PessoaService, que é onde faço a parte de inserir/listar **/
     public PessoaResponse(Pessoa pessoa) {
         this.id = pessoa.getId();
         this.documento = pessoa.getDocumento();
